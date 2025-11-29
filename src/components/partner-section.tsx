@@ -6,7 +6,7 @@ import { useHeroBg } from "@/contexts/hero-bg-context"
 
 const partners = [
   {
-    name: "Partner One",
+    name: "Hyperion",
     logoUrl: "/partners/partner-one.png",
     websiteUrl: "https://partnerone.com",
   },
@@ -23,7 +23,7 @@ export function PartnerSection() {
   return (
     <section id="partners" className="relative z-20 flex flex-col justify-center py-24 px-8 md:px-12">
       <div className="max-w-5xl mx-auto w-full">
-        <Pill className="mb-8">Our Partners</Pill>
+        <Pill className="mb-8">Integrations</Pill>
         <div className="grid md:grid-cols-2 gap-12 mt-16">
           {partners.map((partner) => (
             <a
