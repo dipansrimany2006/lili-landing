@@ -25,6 +25,11 @@ const partners = [
     name: "DexScreener",
     logoUrl: "/partner/dexscreener.png",
     websiteUrl: "https://dexscreener.com",
+  },
+  {
+    name:"Hyperliquid",
+    logoUrl: "/partner/blob.gif",
+    websiteUrl:"https://hyperfoundation.org/"
   }
 ]
 
