@@ -34,6 +34,7 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-14 animate-fade-in-up animation-delay-300">
+            <Link href="https://applilipadlaunch.vercel.app/">
             <Button
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
@@ -41,6 +42,7 @@ export function Hero() {
             >
               [Launch Project]
             </Button>
+            </Link>
             <Link href="/docs">
               <Button
                 onMouseEnter={() => setIsHovering(true)}

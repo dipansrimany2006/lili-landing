@@ -28,7 +28,7 @@ export const Header = () => {
         </nav>
         <Link
           className="uppercase max-lg:hidden transition-colors ease-out duration-150 font-poppins text-base text-soft-mint hover:text-soft-mint/80"
-          href="/#sign-in"
+          href="https://applilipadlaunch.vercel.app/"
         >
           Get Started
         </Link>
