@@ -5,7 +5,7 @@ import { MobileMenu } from "./mobile-menu"
 const navItems = [
   { label: "Why Us", href: "#why-us" },
   { label: "How it works", href: "#how-it-works" },
-  { label: "docs", href: "#docs" }
+  { label: "docs", href: "docs" }
 ]
 
 export const Header = () => {
