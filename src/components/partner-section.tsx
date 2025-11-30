@@ -21,15 +21,15 @@ const partners = [
     logoUrl: "/partner/Amnis.svg",
     websiteUrl: "https://amnis.example.com",
   },
+  // {
+  //   name: "DexScreener",
+  //   logoUrl: "/partner/dexscreener.png",
+  //   websiteUrl: "https://dexscreener.com",
+  // },
   {
-    name: "DexScreener",
-    logoUrl: "/partner/dexscreener.png",
-    websiteUrl: "https://dexscreener.com",
-  },
-  {
-    name:"Hyperliquid",
-    logoUrl: "/partner/blob.gif",
-    websiteUrl:"https://hyperfoundation.org/"
+    name:"LiquidSwap",
+    logoUrl: "/partner/liquidswap.png",
+    websiteUrl:"https://pontem.network/liquidswap"
   }
 ]
 
