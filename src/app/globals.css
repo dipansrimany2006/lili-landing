@@ -4,11 +4,19 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #0b1418;
+  --background: #0B1418;
   --foreground: #ffffff;
   --primary: #d4f6d3;
   --primary-foreground: #ffffff;
   --border: #424242;
+
+  /* Soothing accent colors */
+  --soft-teal: #a8d5d8;
+  --soft-sage: #b8d4be;
+  --soft-lavender: #c9c3e0;
+  --soft-sky: #b4d4e7;
+  --soft-mint: #c2e8d5;
+  --soft-peach: #e8d4c2;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -40,8 +48,16 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: #0B1418;
   --foreground: oklch(0.985 0 0);
+
+  /* Soothing accent colors (slightly muted for dark mode) */
+  --soft-teal: #7fb8bc;
+  --soft-sage: #96b89e;
+  --soft-lavender: #a9a3c4;
+  --soft-sky: #8fb8d0;
+  --soft-mint: #9fd4b8;
+  --soft-peach: #d4b89f;
   --card: oklch(0.145 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
@@ -88,8 +104,8 @@
 }
 
 @theme inline {
-  /* updated font to Lilita One */
-  --font-sans: var(--font-lilita-one);
+  /* Updated font to Poppins */
+  --font-sans: var(--font-poppins);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -126,6 +142,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Soothing accent colors */
+  --color-soft-teal: var(--soft-teal);
+  --color-soft-sage: var(--soft-sage);
+  --color-soft-lavender: var(--soft-lavender);
+  --color-soft-sky: var(--soft-sky);
+  --color-soft-mint: var(--soft-mint);
+  --color-soft-peach: var(--soft-peach);
 }
 
 @layer base {
@@ -157,3 +181,115 @@ body {
   width: 100%;
   height: 100%;
 }
+
+/* Hero fade-in animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animation-delay-100 {
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+/* Scroll-triggered animations */
+@keyframes scroll-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-fade-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll-fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  animation: scroll-fade-in 0.7s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% entry 40%;
+}
+
+.scroll-animate-left {
+  opacity: 0;
+  animation: scroll-fade-in-left 0.7s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% entry 40%;
+}
+
+.scroll-animate-right {
+  opacity: 0;
+  animation: scroll-fade-in-right 0.7s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% entry 40%;
+}
+
+.scroll-animate-scale {
+  opacity: 0;
+  animation: scroll-scale-in 0.7s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% entry 40%;
+}
+
+/* Staggered delays for children */
+.scroll-stagger > *:nth-child(1) { animation-delay: 0s; }
+.scroll-stagger > *:nth-child(2) { animation-delay: 0.1s; }
+.scroll-stagger > *:nth-child(3) { animation-delay: 0.2s; }
+.scroll-stagger > *:nth-child(4) { animation-delay: 0.3s; }
+.scroll-stagger > *:nth-child(5) { animation-delay: 0.4s; }
+.scroll-stagger > *:nth-child(6) { animation-delay: 0.5s; }

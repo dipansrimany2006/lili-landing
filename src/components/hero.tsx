@@ -1,5 +1,6 @@
 "use client"
 import dynamic from "next/dynamic"
+import Link from "next/link"
 import { Pill } from "./pill"
 import { Button } from "./ui/button"
 import { useHeroBg } from "@/contexts/hero-bg-context"
@@ -20,29 +21,35 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-col h-svh justify-center pointer-events-none">
         <div className="text-center pointer-events-auto">
-          <Pill className="mb-6">BETA RELEASE</Pill>
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-sans">
-            Unlock your <br /> future growth
+          <Pill className="mb-8 animate-fade-in-up">Live On Aptos</Pill>
+          <h1 className="text-5xl sm:text-7xl md:text-7xl lg:text-8xl font-poppins font-semibold tracking-tight leading-[0.9] animate-fade-in-up animation-delay-100">
+            <span className="inline-block px-4 py-1 bg-black/40 backdrop-blur-sm rounded-lg">Launch slow.</span>
+            <br />
+            <span className="inline-block px-4 py-1 bg-black/40 backdrop-blur-sm rounded-lg mt-2">Launch clean.</span>
+            <br />
+            <span className="inline-block px-4 py-1 bg-black/40 backdrop-blur-sm rounded-lg mt-2 text-primary">Launch unbreakable.</span>
           </h1>
-          <p className="font-mono text-base sm:text-lg text-foreground/60 text-balance mt-8 max-w-[440px] mx-auto">
-            Through perpetual investment strategies that outperform the market
+          <p className="font-poppins text-lg sm:text-xl text-foreground/70 text-balance mt-10 max-w-[500px] mx-auto leading-relaxed animate-fade-in-up animation-delay-200">
+            Aptos-native fair launches for builders who choose transparency.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-14">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-14 animate-fade-in-up animation-delay-300">
             <Button
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
-              className="max-sm:w-full"
+              className="max-sm:w-full text-base px-8 py-6"
             >
-              [Launch a Token]
+              [Launch Project]
             </Button>
-            <Button
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-              className="max-sm:w-full"
-            >
-              [Explore Docs]
-            </Button>
+            <Link href="/docs">
+              <Button
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+                className="max-sm:w-full text-base px-8 py-6"
+              >
+                [Explore Docs]
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

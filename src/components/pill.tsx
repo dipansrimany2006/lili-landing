@@ -12,7 +12,7 @@ export const Pill = memo(({ children, className }: { children: React.ReactNode, 
       style={{
         "--poly-roundness": px(polyRoundness),
       } as React.CSSProperties}
-      className={cn("bg-[#262626]/50 transform-gpu font-medium text-foreground/50 backdrop-blur-xs font-mono text-base inline-flex items-center justify-center px-3 h-9  border border-border [clip-path:polygon(var(--poly-roundness)_0,calc(100%_-_var(--poly-roundness))_0,100%_var(--poly-roundness),100%_calc(100%_-_var(--poly-roundness)),calc(100%_-_var(--poly-roundness))_100%,var(--poly-roundness)_100%,0_calc(100%_-_var(--poly-roundness)),0_var(--poly-roundness))]", className)}
+      className={cn("bg-[#262626]/50 transform-gpu font-poppins text-foreground/50 backdrop-blur-xs text-base inline-flex items-center justify-center px-3 h-9  border border-border [clip-path:polygon(var(--poly-roundness)_0,calc(100%_-_var(--poly-roundness))_0,100%_var(--poly-roundness),100%_calc(100%_-_var(--poly-roundness)),calc(100%_-_var(--poly-roundness))_100%,var(--poly-roundness)_100%,0_calc(100%_-_var(--poly-roundness)),0_var(--poly-roundness))]", className)}
     >
       <span style={{ "--h": px(hypotenuse), "--hh": px(hypotenuseHalf) } as React.CSSProperties} className="absolute inline-block w-[var(--h)] top-[var(--hh)] left-[var(--hh)] h-[2px] -rotate-45 origin-top -translate-x-1/2 bg-border" />
       <span style={{ "--h": px(hypotenuse), "--hh": px(hypotenuseHalf) } as React.CSSProperties} className="absolute w-[var(--h)] top-[var(--hh)] right-[var(--hh)] h-[2px] bg-border rotate-45 translate-x-1/2" />
